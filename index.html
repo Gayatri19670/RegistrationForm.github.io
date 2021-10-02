@@ -1,25 +1,203 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Enroll Here</title>
-        <link href="css/styles1.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1>Registration</h1>
-        <form>
-            <input type="text" placeholder="Name">
-            <div>
-                <input type="radio" id="male" name="gender"><label for="male">Male</label>
-                <input type="radio" id="female" name="gender"><label for="female">Female</label>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register For Cyberagis</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="post" action="registration.cgi" class="register-form" id="register-form" />
+                        <h2>Student registration form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First Name :</label>
+                                <input type="text" name="firstName" id="name" maxlength="25" autofocus required/>
+                                <label for="lname">Last Name :</label>
+                                <input type="text" name="lastName" id="name" maxlength="25" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherfirst_name">Father's First Name :</label>
+                                <input type="text" name="fatherFirstName" id="father_name" maxlength="25" required/>
+                                <label for="fatherLastName">Father's Last Name:</label>
+                                <input type="text" name="fatherLastName" id="father_name" maxlength="25" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" value="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                            	<input type="radio" name="gender" id="others" value="others">
+                            	<label for="others">Others</label>
+                            	<span class="check"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="date" name="birthDate" id="birth_date" min="01-01-1984" max="01-01-2013"/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="checkbox-label">Qualification :  </label>
+                            <div class="form-checkbox-item">
+                                <input type="checkbox"  value="High School">
+                                High School
+                               
+                                
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="checkbox"  value="Intermediate">
+                               Intermediate
+                                
+                            </div>
+                            <div class="form-radio-item">
+                            	<input type="checkbox" value="Graduation" >Graduation
+                            	
+                            	
+                            </div>
+                        </div>
+                       
+                            <div class="form-group">
+                                <label for="state">Course :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                    	<option value=NULL> </option>
+                                    	<option value="Polytechnic">Polytechnic</option>
+                                        <option value="B.Tech">B.Tech</option>
+                                        <option value="M.Tech">M.Tech</option>
+                                        <option value="BBA">BBA</option>
+                                        <option value="MBA">MBA</option>
+                                       
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" maxlength="50" required/>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                    	<option value=NULL> </option>
+                                    	<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                        <option value="Daman and Diu">Daman and Diu</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>                                       
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Jharkhand">Jharkand/option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>                                       
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Pondicherry">Pondicherry</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="City">City :</label>
+                                <input type="text" name="city" id="city" minlength="3" maxlength="20" required/>
+                            </div>                          
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="number" name="pincode" id="pincode" min="100000" max="999999"/>
+                        </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+
+                        <div class="form-group">
+                        	<label for="phoneno">Contact Number: </label>
+                        	<input type="text" name="phoneno" id="phoneno" maxlength="10"  pattern="\d{10}"/>
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Create New Password :</label>
+                                <input type="password" name="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder = "Password" required/>
+                        </div>                       
+
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password:</label>
+                            	<input type="password" name="confirmPassword" id="name" placeholder = "Confirm Password" required/>
+                        </div>
+
+                    </div>
+                        
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
             </div>
-            <input type="text" placeholder="Course">
-            <input type="text" placeholder="Year">
-            <input type="text" placeholder="Branch">
-            <input type="text" placeholder="Mobile Number">
-            <input type="text" placeholder="Your Hobby...">
-            <input type="text" placeholder="Why are you joining Our Community??">
-            <input type="text" placeholder="Interested in....">
-            <input type="submit" name="Submit">
-        </form>
-    </body>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  
+</body>
 </html>
